@@ -6,3 +6,7 @@ purpur.log
 server.log
 rcon.py
 start.bat
+purpur-server.jar
+cache/
+libraries/
+versions/
