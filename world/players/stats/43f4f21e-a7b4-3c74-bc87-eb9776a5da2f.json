@@ -1,0 +1,57 @@
+{
+  "stats": {
+    "minecraft:used": {
+      "minecraft:diamond_pickaxe": 3922
+    },
+    "minecraft:mined": {
+      "minecraft:sandstone": 3,
+      "minecraft:sand": 1,
+      "minecraft:oak_leaves": 9,
+      "minecraft:dirt": 39,
+      "minecraft:diorite": 6,
+      "minecraft:grass_block": 55,
+      "minecraft:cobblestone": 180,
+      "minecraft:packed_ice": 1,
+      "minecraft:stone": 3731
+    },
+    "minecraft:killed_by": {
+      "minecraft:skeleton": 5,
+      "minecraft:player": 8,
+      "minecraft:zombie_villager": 2,
+      "minecraft:creeper": 3,
+      "minecraft:spider": 21,
+      "minecraft:zombie": 98
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 28648,
+      "minecraft:fall_one_cm": 15093,
+      "minecraft:walk_one_cm": 30284,
+      "minecraft:total_world_time": 1110610,
+      "minecraft:leave_game": 373,
+      "minecraft:fly_one_cm": 19132,
+      "minecraft:walk_under_water_one_cm": 1011,
+      "minecraft:damage_taken": 34681,
+      "minecraft:play_time": 1110610,
+      "minecraft:deaths": 137,
+      "minecraft:jump": 17919,
+      "minecraft:time_since_death": 28644
+    },
+    "minecraft:picked_up": {
+      "minecraft:diorite": 6,
+      "minecraft:dirt": 121,
+      "minecraft:packed_ice": 3,
+      "minecraft:cobblestone": 6,
+      "minecraft:stone": 86,
+      "minecraft:bone": 3,
+      "minecraft:arrow": 5,
+      "minecraft:diamond_pickaxe": 2,
+      "minecraft:rotten_flesh": 15,
+      "minecraft:string": 1,
+      "minecraft:grass_block": 1,
+      "minecraft:sand": 1,
+      "minecraft:wheat_seeds": 1,
+      "minecraft:sandstone": 1
+    }
+  },
+  "DataVersion": 4903
+}

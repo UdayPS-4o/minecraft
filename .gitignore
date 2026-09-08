@@ -1,0 +1,8 @@
+logs/
+__pycache__/
+world_backup_generated/
+server.jar
+purpur.log
+server.log
+rcon.py
+start.bat

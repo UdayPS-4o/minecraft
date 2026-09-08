@@ -1,0 +1,22 @@
+services:
+  minecraft:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: minecraft-purpur
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - "25565:25565"
+    environment:
+      MAX_MEMORY: ${MAX_MEMORY:-2G}
+      INIT_MEMORY: ${INIT_MEMORY:-1G}
+      SERVER_PORT: "25565"
+      RCON_PASSWORD: ${RCON_PASSWORD}
+      MANAGEMENT_SECRET: ${MANAGEMENT_SECRET}
+    volumes:
+      - mc_data:/data
+
+volumes:
+  mc_data:

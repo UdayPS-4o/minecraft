@@ -1,0 +1,25 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 1973,
+      "minecraft:time_since_rest": 1245,
+      "minecraft:fall_one_cm": 1320,
+      "minecraft:walk_one_cm": 1601,
+      "minecraft:total_world_time": 1245,
+      "minecraft:leave_game": 3,
+      "minecraft:fly_one_cm": 3788,
+      "minecraft:damage_taken": 6,
+      "minecraft:play_time": 1245,
+      "minecraft:jump": 26,
+      "minecraft:time_since_death": 1245,
+      "minecraft:aviate_one_cm": 60
+    },
+    "minecraft:mined": {
+      "minecraft:soul_fire": 3
+    },
+    "minecraft:used": {
+      "minecraft:diamond_pickaxe": 3
+    }
+  },
+  "DataVersion": 4903
+}
