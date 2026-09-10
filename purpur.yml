@@ -35,7 +35,8 @@ settings:
   server-mod-name: Purpur
   use-alternate-keepalive: false
   disable-give-dropping: false
-  startup-commands: []
+  startup-commands:
+  - gamerule playersSleepingPercentage 1
   bee-count-payload: false
   clamp-attributes: true
   player-deaths-always-show-item: false

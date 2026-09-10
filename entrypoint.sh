@@ -9,6 +9,10 @@ if [ ! -f "$DATA_DIR/purpur-server.jar" ]; then
   cp -a "$SEED_DIR"/. "$DATA_DIR"/
 fi
 
+# purpur.yml (incl. startup-commands) always tracks git, even on an already-seeded volume,
+# so config changes take effect on redeploy without touching the live server by hand.
+cp "$SEED_DIR/purpur.yml" "$DATA_DIR/purpur.yml"
+
 cd "$DATA_DIR"
 
 if [ -n "$RCON_PASSWORD" ]; then
