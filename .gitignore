@@ -10,3 +10,5 @@ purpur-server.jar
 cache/
 libraries/
 versions/
+config.bat
+node_modules
