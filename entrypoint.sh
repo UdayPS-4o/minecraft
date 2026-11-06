@@ -7,6 +7,17 @@ SEED_DIR=/seed
 if [ ! -f "$DATA_DIR/purpur-server.jar" ]; then
   echo "[entrypoint] Empty volume detected, seeding from image with current world/plugins/config..."
   cp -a "$SEED_DIR"/. "$DATA_DIR"/
+  touch "$DATA_DIR/.world-restored-26.2"
+fi
+
+# One-time downgrade 26.3 -> 26.2: the live world was opened by 26.3 and 26.2 can't load it safely.
+# Move it aside as a backup and restore the 26.2 world from git. Runs once (marker file).
+if [ ! -f "$DATA_DIR/.world-restored-26.2" ]; then
+  BACKUP="$DATA_DIR/world-26.3-backup-$(date +%Y%m%d-%H%M%S)"
+  echo "[entrypoint] Restoring 26.2 world from git; current world backed up to $BACKUP"
+  if [ -d "$DATA_DIR/world" ]; then mv "$DATA_DIR/world" "$BACKUP"; fi
+  cp -a "$SEED_DIR/world" "$DATA_DIR/world"
+  touch "$DATA_DIR/.world-restored-26.2"
 fi
 
 # purpur.yml (incl. startup-commands) always tracks git, even on an already-seeded volume,
