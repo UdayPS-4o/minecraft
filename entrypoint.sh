@@ -13,6 +13,15 @@ fi
 # so config changes take effect on redeploy without touching the live server by hand.
 cp "$SEED_DIR/purpur.yml" "$DATA_DIR/purpur.yml"
 
+# Plugin jars always track git too: drop the old jars and copy in the ones from the repo.
+# Plugin config folders (plugins/<Name>/) are left alone, so settings and data survive.
+mkdir -p "$DATA_DIR/plugins"
+rm -f "$DATA_DIR"/plugins/*.jar
+cp "$SEED_DIR"/plugins/*.jar "$DATA_DIR/plugins/"
+
+# The Purpur jar also tracks the image, so changing PURPUR_MC_VERSION in the Dockerfile takes effect.
+cp "$SEED_DIR/purpur-server.jar" "$DATA_DIR/purpur-server.jar"
+
 cd "$DATA_DIR"
 
 if [ -n "$RCON_PASSWORD" ]; then
