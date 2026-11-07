@@ -30,6 +30,13 @@ mkdir -p "$DATA_DIR/plugins"
 rm -f "$DATA_DIR"/plugins/*.jar
 cp "$SEED_DIR"/plugins/*.jar "$DATA_DIR/plugins/"
 
+# LifeStealZ items.yml (custom items + heart recipe) always tracks git as well,
+# overwriting whatever is on the volume. Other LifeStealZ files are left alone.
+if [ -f "$SEED_DIR/plugins/LifeStealZ/items.yml" ]; then
+  mkdir -p "$DATA_DIR/plugins/LifeStealZ"
+  cp "$SEED_DIR/plugins/LifeStealZ/items.yml" "$DATA_DIR/plugins/LifeStealZ/items.yml"
+fi
+
 # The Purpur jar also tracks the image, so changing PURPUR_MC_VERSION in the Dockerfile takes effect.
 cp "$SEED_DIR/purpur-server.jar" "$DATA_DIR/purpur-server.jar"
 
